@@ -1,4 +1,4 @@
-from Recipes import app
+from Recipes.flask_app import app
 
 from flask_app.controllers import users,recipes
 
