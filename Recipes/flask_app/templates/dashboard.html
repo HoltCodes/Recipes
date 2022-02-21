@@ -35,10 +35,10 @@
                         <td>No</td>
                         {% endif %}
                         <td>
-                            <a href="/recipe/{{recipe.id}}">View Instructions</a>
+                            <a href="/recipe/{{recipe.id}}" class="text-light">View Instructions</a>
                             {% if recipe.user_id == session.user_id %}
-                            <a href="/edit/recipe/{{recipe.id}}">Edit</a>
-                            <a href="/destroy/recipe/{{recipe.id}}">Delete</a>
+                            <a href="/edit/recipe/{{recipe.id}} "class="text-light">Edit</a>
+                            <a href="/destroy/recipe/{{recipe.id}}"class="text-light">Delete</a>
                             {% endif %}
                         </td>
                     </tr>
