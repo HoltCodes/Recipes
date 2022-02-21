@@ -22,7 +22,7 @@
         {% with messages = get_flashed_messages(category_filter=['recipe']) %}
             {% if messages %}
             <div class="alert alert-danger" role="alert">
-                <strong>Flash AHHHHHHH!!!!</strong>
+                <strong>Incomplete</strong>
                     {% for message in messages %}
                     <p>{{message}}</p>
                     {% endfor %}
@@ -42,8 +42,8 @@
                     <textarea name="description"  cols="30" rows="5" class="form-control">{{edit.description}}</textarea>
                 </div>
                 <div class="form-group">
-                    <label for="instructions">Instructions:</label>
-                    <textarea name="instructions"  cols="30" rows="5" class="form-control">{{edit.instructions}}</textarea>
+                    <label for="instruction">Instructions:</label>
+                    <textarea name="instructions"  cols="30" rows="5" class="form-control">{{edit.instruction}}</textarea>
                 </div>
             </div>
             <div class="col-4">

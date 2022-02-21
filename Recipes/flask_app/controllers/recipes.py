@@ -23,7 +23,7 @@ def create_recipe():
     data = {
         "name": request.form["name"],
         "description": request.form["description"],
-        "instructions": request.form["instructions"],
+        "instruction": request.form["instruction"],
         "under30": int(request.form["under30"]),
         "date_made": request.form["date_made"],
         "user_id": session["user_id"]
@@ -52,7 +52,7 @@ def update_recipe():
     data = {
         "name": request.form["name"],
         "description": request.form["description"],
-        "instructions": request.form["instructions"],
+        "instruction": request.form["instruction"],
         "under30": int(request.form["under30"]),
         "date_made": request.form["date_made"],
         "id": request.form['id']
