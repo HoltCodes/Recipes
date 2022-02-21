@@ -7,29 +7,27 @@
     <title>New Recipe</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
-<body>
-    <nav class="d-flex justify-content-between align-items-center col-12">
+<body class="bg-secondary">
+    <nav class="d-flex align-items-center justify-content-center col-12 mt-5 mr-4">
         <h1 class="text-center">Welcome {{user.first_name}}!!!</h1>
-        <div class="d-flex col-4 justify-content-around">
-            <a href="/dashboard" class="btn btn-primary">Dashboard</a>
-            <a href="/logout" class="btn btn-info">Logout</a>
-
+        <div class="d-flex justify-content-around ml-5 ">
+            <a href="/new/recipe" class="btn btn-primary">Add New Recipe</a>
+            <a href="/logout" class="btn btn-danger ml-2">Logout</a>
         </div>
 
     </nav>
-    <form action="/create/recipe" method="post" class="col-11 p-4 my-4 bg-dark text-light mx-auto">
+    <form action="/create/recipe" method="POST" class="col-11 p-4 my-4 bg-dark text-light mx-auto">
         <h2 class="text-primary">Add a New Recipe</h2>
         {% with messages = get_flashed_messages(category_filter=['recipe']) %}
             {% if messages %}
             <div class="alert alert-danger" role="alert">
-                <strong>Flash AHHHHHHH!!!!</strong>
+                <strong>Incomplete</strong>
                     {% for message in messages %}
                     <p>{{message}}</p>
                     {% endfor %}
             </div>
             {% endif %}
         {% endwith %}
-        
         <div class="d-flex justify-content-between col-9">
             <div class="col-4">
                 <div class="form-group">
@@ -46,19 +44,17 @@
                 </div>
             </div>
             <div class="col-4">
-
                 <div class="form-group">
                     <label for="date_made">Date Made:</label>
                     <input type="date" name="date_made" class="form-control">
                 </div>
-                <label for="under30">Under 30 Minutes?:</label>
+                <label for="under30">Takes Under 30 Minutes?:</label>
                 <div class="input-group-text bg-dark">
-                    <input type="radio" name="under30" value="0" class="form-control" >
+                    <input type="checkbox" name="under30" value="0" class="form-control" >
                     <label for="0" class="text-warning">No</label>
-
                 </div>
                 <div class="input-group-text bg-dark">
-                    <input type="radio" name="under30" value="1" class="form-control">
+                    <input type="checkbox" name="under30" value="1" class="form-control">
                     <label for="1" class="text-warning">Yes</label>
                 </div>
                 <br>
