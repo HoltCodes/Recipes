@@ -52,7 +52,7 @@ class Recipe:
         if len(recipe['name']) < 3:
             is_valid = False
             flash("Name must be at least 3 characters","recipe")
-        if len(recipe['instructions']) < 3:
+        if len(recipe['instruction']) < 3:
             is_valid = False
             flash("Instructions must be at least 3 characters","recipe")
         if len(recipe['description']) < 3:
